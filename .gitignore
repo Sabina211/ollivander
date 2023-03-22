@@ -1,0 +1,7 @@
+*.cache
+*.dll
+*.suo
+.idea
+[Bb]in/
+[Dd]ebug/
+.vs/
