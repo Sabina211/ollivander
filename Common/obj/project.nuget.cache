@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "dgSpecHash": "3CM7j7FSGiqb6yOU47swoXs53w4yTMGcAbgEBSUtIUYzDXQLaUdd+YstLocJFaWl3ynLqEM+HMPlWrP6In4WAg==",
+  "success": true,
+  "projectFilePath": "E:\\Сабина, курс\\Olivander\\final-project\\src\\Ollivander\\Common\\Common.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Ferdenant\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
+    "C:\\Users\\Ferdenant\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
+    "C:\\Users\\Ferdenant\\.nuget\\packages\\microsoft.extensions.primitives\\2.2.0\\microsoft.extensions.primitives.2.2.0.nupkg.sha512",
+    "C:\\Users\\Ferdenant\\.nuget\\packages\\system.memory\\4.5.1\\system.memory.4.5.1.nupkg.sha512",
+    "C:\\Users\\Ferdenant\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.1\\system.runtime.compilerservices.unsafe.4.5.1.nupkg.sha512",
+    "C:\\Users\\Ferdenant\\.nuget\\packages\\system.text.encodings.web\\4.5.0\\system.text.encodings.web.4.5.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1803",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "You are running the 'restore' operation with an 'HTTP' source, 'http://172.16.100.102:11001/nuget/'. Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source."
+    }
+  ]
+}

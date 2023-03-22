@@ -1,0 +1,23 @@
+{
+  "Version": 1,
+  "Hash": "aFPIB3HxXvc0YsVruQoyYSD6vwSifktGwE0RaGFsLUk=",
+  "Source": "Catalog",
+  "BasePath": "_content/Catalog",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "E:\\Сабина, курс\\Olivander\\final-project\\src\\Ollivander\\Auth\\Auth.csproj",
+      "Version": 2,
+      "Source": "Auth",
+      "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier"
+    }
+  ],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

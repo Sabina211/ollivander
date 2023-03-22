@@ -1,0 +1,12 @@
+E:\Сабина, курс\Olivander\final-project\src\Ollivander\Common\bin\Debug\net6.0\Common.deps.json
+E:\Сабина, курс\Olivander\final-project\src\Ollivander\Common\bin\Debug\net6.0\Common.dll
+E:\Сабина, курс\Olivander\final-project\src\Ollivander\Common\bin\Debug\net6.0\Common.pdb
+E:\Сабина, курс\Olivander\final-project\src\Ollivander\Common\obj\Debug\net6.0\Common.csproj.AssemblyReference.cache
+E:\Сабина, курс\Olivander\final-project\src\Ollivander\Common\obj\Debug\net6.0\Common.GeneratedMSBuildEditorConfig.editorconfig
+E:\Сабина, курс\Olivander\final-project\src\Ollivander\Common\obj\Debug\net6.0\Common.AssemblyInfoInputs.cache
+E:\Сабина, курс\Olivander\final-project\src\Ollivander\Common\obj\Debug\net6.0\Common.AssemblyInfo.cs
+E:\Сабина, курс\Olivander\final-project\src\Ollivander\Common\obj\Debug\net6.0\Common.csproj.CoreCompileInputs.cache
+E:\Сабина, курс\Olivander\final-project\src\Ollivander\Common\obj\Debug\net6.0\Common.dll
+E:\Сабина, курс\Olivander\final-project\src\Ollivander\Common\obj\Debug\net6.0\refint\Common.dll
+E:\Сабина, курс\Olivander\final-project\src\Ollivander\Common\obj\Debug\net6.0\Common.pdb
+E:\Сабина, курс\Olivander\final-project\src\Ollivander\Common\obj\Debug\net6.0\ref\Common.dll

@@ -1,0 +1,253 @@
+name: dockercompose774364588985667084
+services:
+  auth:
+    build:
+      context: E:\Сабина, курс\Olivander\final-project\src\Ollivander
+      dockerfile: Auth/Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: Auth
+      target: base
+    container_name: auth-api
+    entrypoint:
+    - tail
+    - -f
+    - /dev/null
+    environment:
+      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
+      DOTNET_USE_POLLING_FILE_WATCHER: "1"
+      NUGET_FALLBACK_PACKAGES: ""
+    image: auth:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages  "/app/bin/Debug/net6.0/Auth.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
+        dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    networks:
+      default: null
+    ports:
+    - mode: ingress
+      target: 80
+      published: "87"
+      protocol: tcp
+    - mode: ingress
+      target: 443
+      published: "88"
+      protocol: tcp
+    restart: unless-stopped
+    tty: true
+    volumes:
+    - type: bind
+      source: E:\Сабина, курс\Olivander\final-project\src\Ollivander\Auth
+      target: /app
+      bind:
+        create_host_path: true
+    - type: bind
+      source: E:\Сабина, курс\Olivander\final-project\src\Ollivander
+      target: /src
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\Ferdenant\vsdbg\vs2017u5
+      target: /remote_debugger
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\Ferdenant\.nuget\packages\
+      target: /root/.nuget/packages
+      read_only: true
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\Ferdenant\AppData\Roaming/ASP.NET/Https
+      target: /root/.aspnet/https
+      read_only: true
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\Ferdenant\AppData\Roaming/Microsoft/UserSecrets
+      target: /root/.microsoft/usersecrets
+      read_only: true
+      bind:
+        create_host_path: true
+  basket:
+    build:
+      context: E:\Сабина, курс\Olivander\final-project\src\Ollivander
+      dockerfile: Basket/Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: Basket
+      target: base
+    container_name: basket-api
+    entrypoint:
+    - tail
+    - -f
+    - /dev/null
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
+      ASPNETCORE_URLS: https://+:443;http://+:80
+      DOTNET_USE_POLLING_FILE_WATCHER: "1"
+      NUGET_FALLBACK_PACKAGES: ""
+    image: basket:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages  "/app/bin/Debug/net6.0/Basket.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
+        dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    networks:
+      default: null
+    ports:
+    - mode: ingress
+      target: 80
+      protocol: tcp
+    - mode: ingress
+      target: 80
+      published: "85"
+      protocol: tcp
+    - mode: ingress
+      target: 443
+      protocol: tcp
+    - mode: ingress
+      target: 443
+      published: "86"
+      protocol: tcp
+    restart: unless-stopped
+    tty: true
+    volumes:
+    - type: bind
+      source: E:\Сабина, курс\Olivander\final-project\src\Ollivander\Basket
+      target: /app
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\Ferdenant\vsdbg\vs2017u5
+      target: /remote_debugger
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\Ferdenant\AppData\Roaming/ASP.NET/Https
+      target: /root/.aspnet/https
+      read_only: true
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\Ferdenant\AppData\Roaming/Microsoft/UserSecrets
+      target: /root/.microsoft/usersecrets
+      read_only: true
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\Ferdenant\.nuget\packages\
+      target: /root/.nuget/packages
+      read_only: true
+      bind:
+        create_host_path: true
+    - type: bind
+      source: E:\Сабина, курс\Olivander\final-project\src\Ollivander
+      target: /src
+      bind:
+        create_host_path: true
+  catalog:
+    build:
+      context: E:\Сабина, курс\Olivander\final-project\src\Ollivander
+      dockerfile: Catalog/Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: Catalog
+      target: base
+    container_name: catalog-api
+    entrypoint:
+    - tail
+    - -f
+    - /dev/null
+    environment:
+      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
+      DOTNET_USE_POLLING_FILE_WATCHER: "1"
+      NUGET_FALLBACK_PACKAGES: ""
+    image: catalog:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages  "/app/bin/Debug/net6.0/Catalog.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
+        dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    networks:
+      default: null
+    ports:
+    - mode: ingress
+      target: 80
+      published: "90"
+      protocol: tcp
+    - mode: ingress
+      target: 443
+      published: "89"
+      protocol: tcp
+    restart: unless-stopped
+    tty: true
+    volumes:
+    - type: bind
+      source: E:\Сабина, курс\Olivander\final-project\src\Ollivander\Catalog
+      target: /app
+      bind:
+        create_host_path: true
+    - type: bind
+      source: E:\Сабина, курс\Olivander\final-project\src\Ollivander
+      target: /src
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\Ferdenant\vsdbg\vs2017u5
+      target: /remote_debugger
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\Ferdenant\.nuget\packages\
+      target: /root/.nuget/packages
+      read_only: true
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\Ferdenant\AppData\Roaming/ASP.NET/Https
+      target: /root/.aspnet/https
+      read_only: true
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\Ferdenant\AppData\Roaming/Microsoft/UserSecrets
+      target: /root/.microsoft/usersecrets
+      read_only: true
+      bind:
+        create_host_path: true
+  postgreSQL:
+    container_name: postgreSQL
+    environment:
+      POSTGRES_DB: Wands
+      POSTGRES_PASSWORD: "1"
+      POSTGRES_USER: postgres
+    image: postgres
+    networks:
+      default: null
+    ports:
+    - mode: ingress
+      target: 5433
+      published: "5433"
+      protocol: tcp
+    restart: unless-stopped
+  redis:
+    container_name: redis
+    hostname: redis
+    image: redis:6
+    networks:
+      default: null
+    ports:
+    - mode: ingress
+      target: 6379
+      published: "6379"
+      protocol: tcp
+    restart: always
+networks:
+  default:
+    name: dockercompose774364588985667084_default

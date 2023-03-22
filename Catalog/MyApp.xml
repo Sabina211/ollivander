@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Catalog</name>
+    </assembly>
+    <members>
+        <member name="M:Catalog.Controllers.CatalogController.AddWand(Catalog.Models.Wand)">
+            <summary>
+            добавить палочку
+            </summary>
+            <param name="wand"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Catalog.Migrations.init">
+            <inheritdoc />
+        </member>
+        <member name="M:Catalog.Migrations.init.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Catalog.Migrations.init.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Catalog.Migrations.init.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>

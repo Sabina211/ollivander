@@ -1,0 +1,51 @@
+services:
+  auth:
+    build:
+      context: .
+      dockerfile: Auth/Dockerfile
+    container_name: auth-api
+    image: ${DOCKER_REGISTRY-}auth
+    ports:
+      - 87:80
+      - 88:443
+    restart: unless-stopped
+
+  catalog:
+    build:
+      context: .
+      dockerfile: Catalog/Dockerfile
+    container_name: catalog-api
+    env_file: wands.env
+    image: ${DOCKER_REGISTRY-}catalog
+    ports:
+      - 90:80
+      - 86:443
+    restart: unless-stopped
+
+  basket:
+    build:
+      context: .
+      dockerfile: Basket/Dockerfile
+    container_name: basket-api
+    image: ${DOCKER_REGISTRY-}basket
+    ports:
+      - 85:80
+      - 89:443
+    restart: unless-stopped
+
+  postgres:
+    container_name: postgres
+    env_file: wands.env
+    image: postgres:15.0
+    ports:
+      - 5432:5432
+    restart: unless-stopped
+
+  redis:
+    container_name: redis
+    hostname: redis
+    image: redis:6
+    ports:
+      - 6379:6379
+    restart: always
+version: '3.4'

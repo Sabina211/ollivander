@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Auth</name>
+    </assembly>
+    <members>
+        <member name="T:Auth.API.TestController">
+            <summary>
+            проверить авторизацию (тестовый метод)
+            </summary>
+        </member>
+    </members>
+</doc>

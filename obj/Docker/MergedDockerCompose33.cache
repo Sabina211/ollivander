@@ -1,0 +1,111 @@
+name: dockercompose774364588985667084
+services:
+  auth:
+    build:
+      context: E:\Сабина, курс\Olivander\final-project\src\Ollivander
+      dockerfile: Auth/Dockerfile
+    container_name: auth-api
+    image: auth
+    networks:
+      default: null
+    ports:
+    - mode: ingress
+      target: 80
+      published: "87"
+      protocol: tcp
+    - mode: ingress
+      target: 443
+      published: "88"
+      protocol: tcp
+    restart: unless-stopped
+  basket:
+    build:
+      context: E:\Сабина, курс\Olivander\final-project\src\Ollivander
+      dockerfile: Basket/Dockerfile
+    container_name: basket-api
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: https://+:443;http://+:80
+    image: basket
+    networks:
+      default: null
+    ports:
+    - mode: ingress
+      target: 80
+      protocol: tcp
+    - mode: ingress
+      target: 80
+      published: "85"
+      protocol: tcp
+    - mode: ingress
+      target: 443
+      protocol: tcp
+    - mode: ingress
+      target: 443
+      published: "86"
+      protocol: tcp
+    restart: unless-stopped
+    volumes:
+    - type: bind
+      source: C:\Users\Ferdenant\AppData\Roaming/Microsoft/UserSecrets
+      target: /root/.microsoft/usersecrets
+      read_only: true
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\Ferdenant\AppData\Roaming/ASP.NET/Https
+      target: /root/.aspnet/https
+      read_only: true
+      bind:
+        create_host_path: true
+  catalog:
+    build:
+      context: E:\Сабина, курс\Olivander\final-project\src\Ollivander
+      dockerfile: Catalog/Dockerfile
+    container_name: catalog-api
+    image: catalog
+    networks:
+      default: null
+    ports:
+    - mode: ingress
+      target: 80
+      published: "90"
+      protocol: tcp
+    - mode: ingress
+      target: 443
+      published: "89"
+      protocol: tcp
+    restart: unless-stopped
+  postgreSQL:
+    container_name: postgreSQL
+    environment:
+      PGDATABASE: wands
+      PGPASSWORD: "1"
+      PGUSER: postgres
+      POSTGRES_DB: wands
+      POSTGRES_PASSWORD: "1"
+      POSTGRES_USER: postgres
+    image: postgres:15.0
+    networks:
+      default: null
+    ports:
+    - mode: ingress
+      target: 5433
+      published: "5433"
+      protocol: tcp
+    restart: unless-stopped
+  redis:
+    container_name: redis
+    hostname: redis
+    image: redis:6
+    networks:
+      default: null
+    ports:
+    - mode: ingress
+      target: 6379
+      published: "6379"
+      protocol: tcp
+    restart: always
+networks:
+  default:
+    name: dockercompose774364588985667084_default
